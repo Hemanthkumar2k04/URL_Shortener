@@ -1,4 +1,4 @@
-from Base62EncodeDecoder import Encoder, Decoder
+from core import Encoder, Decoder
 from database import supabase_client
 
 encoder = Encoder()

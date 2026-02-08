@@ -1,1 +1,1 @@
-from .ED import Encoder, Decoder
+from .Base62ED import Encoder, Decoder
