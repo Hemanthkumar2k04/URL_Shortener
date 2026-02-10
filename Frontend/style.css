@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.container {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #1d2671;
+  font-size: 2.2rem;
+}
+
+.container > p {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Remove .section class since it's not in your HTML */
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 16px;
+  transition: border 0.2s, box-shadow 0.2s;
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  border-color: #1d2671;
+  box-shadow: 0 0 0 3px rgba(29, 38, 113, 0.15);
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  background: #1d2671;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.1s;
+}
+
+button:hover {
+  background: #151b4d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Result box styling */
+.result {
+  margin-top: 1.5rem;
+  padding: 16px;
+  background: #f4f6ff;
+  border: 1px solid #e1e5ff;
+  border-radius: 8px;
+  font-size: 14px;
+  word-wrap: break-word;
+  text-align: left;
+  display: none; /* Hidden by default */
+}
+
+.result.show {
+  display: block;
+}
+
+.result.error {
+  background: #ffe5e5;
+  border: 1px solid #ffcdcd;
+  color: #b71c1c;
+}
+
+.result.success {
+  background: #f0fff4;
+  border: 1px solid #c6f6d5;
+  color: #22543d;
+}
+
+.result a {
+  color: #1d2671;
+  text-decoration: none;
+  font-weight: 600;
+  word-break: break-all;
+  display: block;
+  margin: 8px 0;
+}
+
+.result a:hover {
+  text-decoration: underline;
+  color: #151b4d;
+}
+
+/* Copy button styling */
+.copy-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.copy-btn:hover {
+  background: #3d8b40;
+  transform: translateY(-1px);
+}
+
+/* Loading animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(29, 38, 113, 0.3);
+  border-radius: 50%;
+  border-top-color: #1d2671;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .container {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  input, button {
+    padding: 12px;
+  }
+}
